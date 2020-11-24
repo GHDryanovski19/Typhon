@@ -1,0 +1,140 @@
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	font-weight: 500;
+	color: #131313;
+}
+h1 {
+	font-size: 70px;
+}
+h2 {
+	font-size: 36px;
+}
+h3 {
+	font-size: 30px;
+}
+h4 {
+	font-size: 24px;
+}
+h5 {
+	font-size: 20px;
+}
+h6 {
+	font-size: 16px;
+}
+p {
+	font-size: 14px;
+	color: #878787;
+	line-height: 2;
+}
+img {
+	max-width: 100%;
+}
+ul,
+ol {
+	padding: 0;
+	margin: 0;
+}
+.text-white h1,
+.text-white h2,
+.text-white h3,
+.text-white h4,
+.text-white h5,.text-white h6,.text-white p,.text-white span,.text-white li,.text-white a {
+	color: #fff;
+}
+.header-section {
+	background: #131313;
+	clear: both;
+	overflow: hidden;
+	border-bottom: solid #f74943;
+	border-bottom-width: 0.8mm;
+}
+.main-menu ul li {
+	display: inline-flex;
+}
+.footer-top-section {
+	background-image: url("../img/pattern.png");
+	background-repeat: repeat;
+	clear: both;
+	position: relative;
+	height: 22%;
+	width: 100%;
+}
+@media screen and (max-width: 600px) {
+	.footer-top-section {
+		height: 31%;
+	}
+}
+.footer-section .container {
+	position: relative;
+	padding: 60px 15px 25px;
+}
+.footer-left-pic {
+	position: absolute;
+	left: -13px;
+	bottom: 19px;
+}
+.footer-right-pic {
+	position: absolute;
+	right: 50px;
+	bottom: 19px;
+}
+.footer-menu {
+	padding-top: 62px;
+}
+.footer-menu li:last-child a {
+	margin-right: 0;
+}
+.footer-social {
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+.footer-social a:first-child {
+	margin-left: 0;
+}
+.footer-menu {
+	list-style: none;
+	float: right;
+}
+.footer-menu li {
+	display: inline;
+}
+.footer-menu li a {
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 500;
+	color: #aeaeae;
+	margin-left: 30px;
+}
+@media (min-width: 1200px) {
+	.container {
+		max-width: 50%;
+	}
+}
+@media (max-width: 600px) {
+	.container {
+		max-width: 10%;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.footer-logo {
+		margin-bottom: 50px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.header-section {
+		overflow: visible;
+		padding: 10px 0;
+	}
+	.header-section {
+		position: relative;
+	}
+	.footer-logo {
+		margin-bottom: 50px;
+	}
+	.footer-menu li:first-child a {
+		margin-left: 0;
+	}
+	.footer-menu {
+		float: none;
+	}
+}
