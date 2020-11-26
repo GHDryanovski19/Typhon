@@ -1,3 +1,5 @@
+// Navigation Bar //
+
 function navbar() 
 {
   var x = document.getElementById("myTopnav");
@@ -11,6 +13,9 @@ function navbar()
     x.className = "topnav";
   }
 }
+
+// Navigation Bar //
+
 function goBack() 
 {
   window.history.back(); //call onclick = "goBack()"//

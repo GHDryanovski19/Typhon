@@ -31,15 +31,6 @@ body, html {
 	height: 100%;
 	line-height: 1.8em;	
 }
-.limg1 {
-	background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../img/FullPicture.png");
-	min-height: 100%;
-	position: relative;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-}
 .mt {
 	align-content: center;
 }
@@ -117,6 +108,16 @@ body, html {
 		display: none;
 	}
 }
+/* Backgrounds */
+.background {
+	background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../img/FullPicture.png");
+	min-height: 100%;
+	position: relative;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
 .background2 {
 	background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../img/FullPicture.png");
 	color:#111111;
@@ -137,6 +138,7 @@ body, html {
 	background-attachment: fixed;
 	align-content: bottom;
 }
+/* Backgrounds */
 .topnav {
 	overflow: hidden;
 }
@@ -199,30 +201,6 @@ opacity: 0.7;
 .button {
 	border-radius: 50px;
 }
-.radius {
-border-radius: 24px;
-} .rounding { border-radius: 22px;}
-.shopBG {
-	background-image: url("../img/ShopBG.png");
-	color:#111111;
-	position: relative;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	align-content: bottom;
-}
-.BlipBG {
-	background-image: url("../img/BGwithBlimp.png");
-	color:#111111;
-	position: relative;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	align-content: bottom;
-}
-
 /*-------------------BackDagger---------------------------*/
 .dagger {
 	height: 200px;
@@ -358,4 +336,11 @@ border-radius: 24px;
 .miniBots {
 	height: 75px;
 	width: 500px;
+}
+.grid button{
+	grid-column: 2/2;
+	grid-row: 1/1;
+}
+.center {
+	text-align: center;
 }
