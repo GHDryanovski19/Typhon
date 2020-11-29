@@ -249,11 +249,19 @@ function init(player, OPPONENT){
     function showGameOver(player){
         let message = player == "tie" ? "Oops No Winner" : "The Winner is";
         let imgSrc = `../img/${player}.png`;
-
+        console.log("test")
         gameOverElement.innerHTML = `
             <h1>${message}</1>
             <img class="winner-img" src=${imgSrc} </img>
             <div class="play" onclick="location.reload()">Play Again!</div>`;
+
+            let autentificationValue = "youwillneverguestthevalueofthegetrequest";
+            $.ajax({
+                type : "POST",
+                url  : "../php/playCounter.php",
+                data : {Autentification : autentificationValue},
+                success: function(res){}
+            });
 
         gameOverElement.classList.remove("hide");
     }
