@@ -1,8 +1,10 @@
 <?php
 
-session_start();
+    session_start();
 
-session_destroy();
-header('location: reglog.php');
+    session_destroy();
+    setcookie("username", "", time() + (86400 * 30), "/");
+    setcookie("playCounter", "", time() + (86400 * 30), "/");
+    header('location: ../html/index.php');
 
 ?>

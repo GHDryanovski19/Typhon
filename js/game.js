@@ -107,7 +107,9 @@ function init(player, OPPONENT){
             let space = getIJ(id);
 
             // draw the move on board
-            drawOnBoard(player.computer, space.i, space.j);
+
+                drawOnBoard(player.computer, space.i, space.j);
+            
 
             // Check if the play wins
             if(isWinner(gameData, player.computer)){

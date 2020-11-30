@@ -1,22 +1,21 @@
 <?php
-
+session_start();
 require_once 'db_connect.php';
 if(isset($_POST['Autentification']))
 {
     if("youwillneverguestthevalueofthegetrequest" == $_POST['Autentification'])
     {
         $pdo = new PDO("mysql:host=$host;dbname=$dbname", $dbusername, $dbpassword);
-        $sql = 'SELECT username FROM users';
-        $getUsers = $pdo->prepare("SELECT username FROM users WHERE id = 1");
+        $sql = "SELECT play_counter, id FROM users WHERE username = :username ";
+        $getUsers = $pdo->prepare($sql);
+        $getUsers -> bindParam("username",$_SESSION['username'],PDO::PARAM_STR);
         $getUsers -> execute();
         $result = $getUsers->fetchALL(PDO::FETCH_COLUMN, 0);
-        $result = intval($result[0]);
-        echo $result;
-        $result++;
-        $updateCounter = $pdo -> prepare("UPDATE users SET username = :username WHERE id = 1");
-        $updateCounter -> bindParam("username", $result, PDO::PARAM_STR);
+        $result[0]++;
+        $updateCounter = $pdo -> prepare("UPDATE users SET play_counter = :playCounter WHERE username = :username");
+        $updateCounter -> bindParam("username",$_SESSION['username'], PDO::PARAM_STR);
+        $updateCounter -> bindParam("playCounter", $result[0], PDO::PARAM_INT);
         $updateCounter -> execute();
     }
 }
-
 ?>

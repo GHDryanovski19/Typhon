@@ -1,5 +1,18 @@
+<?php
+	require_once '../php/db_connect.php';
+	if (isset($_COOKIE["username"])) {
+		$pdo = new PDO("mysql:host=$host;dbname=$dbname", $dbusername, $dbpassword);
+        $sql = "SELECT play_counter FROM users WHERE username = :username ";
+        $getUsers = $pdo->prepare($sql);
+        $getUsers -> bindParam("username",$_COOKIE['username'],PDO::PARAM_STR);
+        $getUsers -> execute();
+        $result = $getUsers->fetchALL(PDO::FETCH_COLUMN, 0);
+        $_COOKIE['playCounter'] = $result[0];
+	}
+?>
+
 <!DOCTYPE html>
-<html lang="zxx">
+<html>
 <head>
 	<title>Gamers' Headquarter</title>
 	<meta charset="UTF-8">
@@ -22,16 +35,26 @@
 				<nav class="main-menu">
 					<ul>
 						<div class="topnav" id="myTopnav">
-								<a href="index.html">
+								<a href="index.php">
 									<img class = "picz_logo" src="../img/logo.png" align = "top">
 								</a>
-
-								<a href="../php/login.php"><button class="mt medium diagonal">Login</button></a>
-								<a href="../php/reglog.php"><button class="mt medium diagonal">Sign up</button></a>
-								
 								<a href="javascript:void(0);" class="icon" onclick="navbar()">
 									<i class="fa fa-bars"></i>
 								</a>
+								<?php
+									if (!isset($_COOKIE['username'])) {
+										echo "<a href='../php/reglog.php'><button class='mt medium diagonal'>Sign up</button></a>";
+										
+									} else {
+										echo "<a href='../php/logout.php'><button class='mt medium diagonal'>Logout</button></a>";
+										echo "<h3 style='
+													color: #fff;
+													font-size: 20px;
+													float: right;
+													padding: 12px;
+										'>User: ".$_COOKIE['username']." / Games played: ".$_COOKIE['playCounter']."<h3>";
+									}
+								?>
 						</div>
 					</ul>
 				</nav>
@@ -40,6 +63,19 @@
 	
 	<div class="background3">
 		<img src="../img/WellcomeBotTR.png"/>
+		<div>
+		<?php
+			if (!isset($_COOKIE['username'])) {} else {
+				echo "<h3 style='
+							color: #fff;
+							font-size: 20px;
+							text-align: center;
+							padding: 12px;
+				'>Games played: ".$_COOKIE['playCounter']."<h3>
+				";
+			}
+		?>
+		</div>
 		<div>
 			<img class="miniBots container2" src="../img/Mini_bots.png">
 		</div>

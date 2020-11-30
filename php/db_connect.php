@@ -1,5 +1,4 @@
 <?php
-session_start();
 $dbusername = "root";
 $dbpassword = "";
 $dbname = "website";

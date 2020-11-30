@@ -1,30 +1,25 @@
 <?php
 
 require_once 'db_connect.php';
+print_r($_POST);
+if(isset($_POST['signup'])) {
 
-if(isset($_POST['signup-btn'])) {
-
-      $username = $_POST['user-name'];
-      $email = $_POST['user-email'];
-      $password = $_POST['user-pass'];
+      $username = $_POST['username'];
+      $email = $_POST['email'];
+      $password = $_POST['password'];
 
       $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
-    try {
-      $SQLInsert = "INSERT INTO users (username, password, email, to_date)
-                   VALUES (:username, :password, :email, now())";
-
-      $statement = $conn->prepare($SQLInsert);
-      $statement->execute(array(':username' => $username, ':password' => $hashed_password, ':email' => $email));
-
-      if($statement->rowCount() == 1) {
-        header('location: reglog.php');
-      }
-    }
-    catch (PDOException $e) {
-      echo "Error: " . $e->getMessage();
-    }
-
+	
+	  $pdo = new PDO("mysql:host=$host;dbname=$dbname", $dbusername, $dbpassword);
+	  $sql = "INSERT INTO users (username, password, email) VALUES (:username, :password, :email)";
+	  $addUser = $pdo->prepare($sql);
+	  $addUser -> execute(array(
+		':username' => $username,
+		':password' => $hashed_password,
+		':email' => $email
+	));;
+	  print_r ($addUser -> errorCode());
+	  header("Location: reglog.php");
 }
 
 ?>
