@@ -12,31 +12,29 @@ body {
   display: block;
   margin: 20px;
   padding: 15px 20px;
-  background-color: #ece7e7;
+  background-color:#c7c7c7;
   font-size: 20px;
   border: none;
   outline: none;
   font-size: 22px;
-  box-shadow: 15px 15px 25px #a8a8a8;
-  transition: box-shadow 0.5s;
-}
-.form input:focus {
-  box-shadow: 5px 5px 15px #a8a8a8;
+  border-radius: 15px;
 }
 .form .btn {
   margin: auto;
   padding: 10px 35px;
-  background-color: #f1a566;
+  background-color: #131313;
   color: #fff;
   border: none;
   font-size: 22px;
   border-radius: 10px;
-  box-shadow: 15px 15px 25px #a8a8a8;
-  transition: box-shadow 0.5s;
   outline: none;
+  transition: all 0.3s ease;
 }
 .form .btn:hover {
-  box-shadow: 5px 5px 15px #aaa;
+  background-color: #f74943;
+}
+.formBackground {
+  background-color: #3d3d3d;
 }
 .form {
   display: flex;
@@ -64,16 +62,15 @@ body {
   font-size: 25px;
   margin: 40vh auto;
   padding: 10px 55px;
-  background-color: #f1a566;
+  background-color: #131313;
   color: #fff;
   border: none;
   border-radius: 10px;
-  box-shadow: 15px 15px 25px #a8a8a8;
-  transition: box-shadow 0.5s;
   outline: none;
+  transition: all 0.3s ease;
 }
 .cover .switch-btn:hover {
-  box-shadow: 5px 5px 15px #aaa;
+  background-color: #f74943;
 }
 .left-section .cover {
   float: left;
@@ -92,6 +89,9 @@ body {
   margin: 60vh auto;
   color: #fff;
   font-size: 50px;
+}
+.left-section h1 {
+  color: #fff;
 }
 .left-section .cover h3 {
   position: absolute;
@@ -122,6 +122,9 @@ body {
   margin: 60vh auto;
   color: #fff;
   font-size: 50px;
+}
+.right-section h1 {
+  color: #fff;
 }
 .right-section .cover h3 {
   position: absolute;
