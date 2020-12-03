@@ -110,7 +110,6 @@ function init(player, OPPONENT){
 
                 drawOnBoard(player.computer, space.i, space.j);
             
-
             // Check if the play wins
             if(isWinner(gameData, player.computer)){
                 showGameOver(player.computer);
@@ -153,7 +152,9 @@ function init(player, OPPONENT){
             let backup = gameData[id];
 
             // MAKE THE MOVE FOR THE PLAYER
+
             gameData[id] = PLAYER;
+
 
             // SAVE THE MOVE'S ID AND EVALUATION
             let move = {};
