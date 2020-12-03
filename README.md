@@ -19,7 +19,3 @@ We are **TYPHON**. The task is to create a **Math** game. We had a month to comp
 
 * [Presentation](https://codingburgas-my.sharepoint.com/:p:/g/personal/mkdimov19_codingburgas_bg/ERyfNqnZ7k9Lunc80FvP5DkBtC8OGg02Ky6owfxBuzE3eQ?e=tLWcao)
 * [Documentation](https://codingburgas-my.sharepoint.com/:w:/r/personal/ghdryanovski19_codingburgas_bg/_layouts/15/Doc.aspx?sourcedoc=%7B65057B3E-F7C5-46B8-A055-8403E7082776%7D&file=TYPHON.docx&action=edit&mobileredirect=true&wdNewAndOpenCt=1606144241533&ct=1606144241533&wdPreviousSession=3da44716-463d-426e-b087-4bb916bd7a0b&wdOrigin=OFFICECOM-WEB.START.UPLOAD)
-
-# Download
-
-- If you wish to try the game yourself you can do that by clicking the [link](https://minhaskamal.github.io/DownGit/#/home?url=https:%2F%2Fgithub.com%2FGHDryanovski19%2FTyphon).
