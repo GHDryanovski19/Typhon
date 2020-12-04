@@ -1,7 +1,7 @@
 <img src="images/typhon.png">
 # Typhon
 
-A school project for "Technologica" - to make a mathematics game using only c++, html and .js.
+A school project for "Technologica" - to make a mathematics game using only C++ or  HTML5 & CSS3 & Javascript.
 
 # Contributors
 
